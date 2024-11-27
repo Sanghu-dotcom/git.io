@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(13, 13, 138);
+            font-family: cursive;
+            font-weight: bold;
+        }
+        h1{
+            color:lightblue;
+            font-size: 55px;
+            text-align: center;
+
+        }
+        h4{
+            color:lightblue;
+            font-size: 25px;
+            text-align: center;
+
+        }
+        .dice1{
+            width:100px;
+            height: 100px;
+            border:2px solid white;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            position: absolute;
+            top:50%;
+            left:40%;
+
+        }
+        .dice2{
+            width:100px;
+            height: 100px;
+            border:2px solid white;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            position: absolute;
+            top:50%;
+            left:50%;
+
+        }
+        .btn1{
+            background-color: lightblue;
+            color:#fff;
+            width:10%;
+            height:10%;
+            border-radius: 5px;
+            top:70%;
+            Left:45%;
+            position: absolute;
+            font-weight: bold;
+            border:2px solid lightblue;
+             }
+             .btn2{
+            background-color: lightblue;
+            color:#fff;
+            width:10%;
+            height:10%;
+            border-radius: 5px;
+            top:85%;
+            Left:45%;
+            position: absolute;
+            font-weight: bold;
+            border:2px solid lightblue;
+             }
+             .player1{
+                position: absolute;
+                top:33%;
+                left:40%;
+             }
+             .player2{
+                position: absolute;
+                top:33%;
+                left:50%;
+             }
+             .btn1:active{
+                background-color: #fff;
+             }
+            .dot1{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+             }
+             .dot2{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:50%;
+                left:40%;
+             }
+             .dot3{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:60%;
+                left:40%;
+             }
+             .dot4{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:1%;
+                left:55%;
+                position: absolute;
+             }
+             .dot5{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:32%;
+                left:55%;
+                position: absolute;
+             }
+             .dot6{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:60%;
+                left:55%;
+                position: absolute;
+             }
+             .dot7{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:60%;
+                left:65%;
+            }
+            .dot8{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:70%;
+                left:65%;
+            }
+            .dot9{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:80%;
+                left:65%;
+            }
+            .dot10{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:60%;
+                left:61%;
+                position: absolute;
+
+            }
+            .dot11{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:31%;
+                left:61%;
+                position:absolute;
+            }
+            .dot12{
+                background-color: black;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+                margin:10px;
+                top:1%;
+                left:61%;
+                position:absolute;
+            }
+           
+    </style>
+   
+</head>
+<body>
+    <h1>Let's Play</h1><br><br>
+    <h4 class="player1" id="player1">Player 1</h4>
+    <h4 class="player2" id="player2">Player 2</h4>
+    <div class="dice1">
+        <div class="dot1"></div>
+        <div class="dot2"></div>
+        <div class="dot3"></div>
+        <div class="dot4"></div>
+        <div class="dot5"></div>
+        <div class="dot6"></div>
+    </div>
+    <div class="dice2">
+        <div class="dot7"></div>
+        <div class="dot8"></div>
+        <div class="dot9"></div>
+        <div class="dot10"></div>
+        <div class="dot11"></div>
+        <div class="dot12"></div>
+    </div>
+    <button class="btn1" onclick="rollDice()">Roll the dice</button><br><br><br>
+    <button class="btn2" onclick="editnames()">Edit names</button>
+     
+    
+     
+</body>
+<script>
+    function rollDice(){
+        window.location.href="dice.html";
+    }
+    function editnames(){
+        const player1=prompt("Enter player 1's Name");
+        const player2=prompt("Enter player 2's Name");
+        if(player1 && player2){
+            document.getElementById("player1").innerHTML=player1;
+            document.getElementById("player2").innerHTML=player2;
+        }
+        else{
+            alert("Both names are required");
+        }
+    }
+    
+</script>
+</html>
